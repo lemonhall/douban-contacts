@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>
+友邻广播
+</title>
+<meta content="提供图书、电影、音乐唱片的推荐、评论和价格比较，以及城市独特的文化生活。" name="description"/>
+    <link href="http://img3.douban.com/css/core/packed__init_1507990223.css" rel="stylesheet" type="text/css">
+    <link href="http://img3.douban.com/css/frontpage/packed__m_index5761939410.css" rel="stylesheet" type="text/css">
+    <script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script> 
+<style type="text/css">
+#db-isay{position:relative;padding:0;margin:2px 0 2em;overflow:hidden;*zoom:1}#db-isay .item{margin-bottom:5px;position:relative;z-index:0}#db-isay:after{content:&#39;\0020&#39;;clear:both;display:block}#db-isay label{position:absolute;margin:4px 0 0 6px;font-size:14px;color:#aaa;pointer-events:none;cursor:text}#db-isay #isay-label{margin:6px 0 0 9px}#db-isay textarea{background:transparent;width:556px;padding:7px 25px 7px 7px;_margin-top:-1px;height:16px;overflow:hidden;vertical-align:bottom;border:1px solid #d7d7d7;border-radius:1px;-moz-border-radius:1px;font-family:tahoma;line-height:1.3;-webkit-transition:all .1s}#db-isay.active textarea{border-color:#ccc;height:45px;border-radius:2px 2px 0 0;-moz-border-radius:2px 2px 0 0}#db-isay .btn{float:none;width:auto;margin-right:0;text-align:right}#db-isay .bn-flat{vertical-align:middle}#db-isay .bn-flat input{font-size:14px;overflow:visible;line-height:2.2;height:2.1em;_line-height:1;_height:1em;_padding-top:.6em;_padding-bottom:.3em}#db-isay .bn-flat input:focus{background:#e0e0e0}#db-isay.isay-disable .btn .bn-flat input{border-color:#b9b9b9!important;background:#f0f0f0!important;color:#999!important;cursor:text}#db-isay.isay-disable .btn .bn-flat:hover{border-color:#b9b9b9;text-shadow:none}#db-isay .bd{color:#999}#db-isay .msg{float:right;position:relative;line-height:2}#db-isay .field .error,#db-isay .waiting{line-height:27px}#isay-counter{display:inline-block;*display:inline;zoom:1;padding-right:10px;vertical-align:middle;color:#666;font-weight:600;font-size:16px}#isay-counter strong{color:#f92d09}#db-isay .field{display:none;position:relative;background:#f4f4f4;margin:-5px 0 5px;_margin-top:-7px;padding:8px;padding:5px 8px;border:1px solid #ccc;border-top:0}#db-isay .field label{font-size:12px}#db-isay .url{width:450px;margin-right:5px;height:12px;padding:7px 4px 6px;line-height:12px;*padding:7px 4px 5px;*zoom:1;border:1px solid #ccc;color:#999;border-radius:1px;-moz-border-radius:1px}#db-isay .field .bn-flat{border-color:#ccc;-moz-border-radius:2px;border-radius:2px}#db-isay .field .bn-flat input{font-size:12px;overflow:visible}#db-isay .field .hd{height:22px;margin:0}#db-isay .field .hd input{height:12px;line-height:12px;outline:0;padding:3px 3px;*padding:4px 3px 2px;border:1px solid #ccc}#db-isay .field .hd .field-title{background:transparent;height:16px;line-height:16px;padding:2px 0;border:0;color:#666}#db-isay .editable{color:#333;cursor:pointer}#db-isay .field .hd input.editable-over{background-color:#feff9f}#db-isay .field .active .url{border-color:#9cf;color:#333;box-shadow:0 0 2px rgba(20,180,255,0.7)}#db-isay .field .active .bn-flat{border-color:#ccc}#db-isay .bn-x{border:0;background:0;cursor:pointer;color:#ccc;font:400 14px/0.9 tahoma;line-height:.9;position:absolute;right:8px;top:5px}#db-isay .bn-x:hover,#db-isay .bn-x:active,#db-isay .bn-x:visited{color:#bec3c3;background:transparent}#db-isay .isay-close{_top:7px}#db-isay .ico{background:url(/pics/isay-icos.gif) no-repeat 0 0;display:inline-block;height:20px;width:18px;margin-right:12px;text-indent:999em;overflow:hidden;line-height:20px;color:#888;font-family:stheiti,tahoma,simsun,sans-serif}#db-isay .ico-pic{background-position:0 -20px}#db-isay .ico-topic{background-position:-1px -41px}#db-isay .btn{display:none}#db-isay.active .btn,#db-isay.acting .field{display:block}#db-isay .tipmsg,#db-isay .bn-submit,#db-isay .isay-close{display:none}#db-isay.active .tipmsg,#db-isay.active .bn-submit,#db-isay.active .isay-close{display:inline-block}#db-isay .btn-group{position:absolute;top:6px;right:0;white-spacing:nowrap;font-size:0}#db-isay .btn-group *{font-size:12px}#db-isay.active .btn-group{position:relative;float:left;margin-top:-30px;margin-bottom:10px}#db-isay.active .btn-group .ico{width:auto;text-indent:0;padding-left:20px;margin-right:15px}#db-isay.active .btn-group .ico-pic{padding-left:21px}#db-isay.active .btn-group .ico-topic{padding-left:16px;margin-left:-5px}#db-isay .waiting{color:#999}#db-isay .waiting{background:url(/pics/loading.gif) no-repeat 0 5px;padding-left:22px}.abs-out{position:absolute;left:-9999px;top:-9999px}.msg-wait{background:url(/pics/loading.gif) no-repeat 0 5px;padding-left:22px}#isay-upload{position:absolute;width:21px;height:22px;padding:0;overflow:hidden;right:38px;top:-1px;opacity:0}#isay-upload input{cursor:pointer;position:absolute;height:22px;right:0;margin:0;filter:alpha(opacity=0);-ms-filter:alpha(opacity=0)}#db-isay.active #isay-upload{right:64px;width:48px}.mention-highlighter{margin:0;position:absolute;z-index:0;top:0;left:1px;overflow:hidden;background:#fff;white-space:pre-wrap;word-wrap:break-word;color:#fff;width:556px;padding:7px 25px 0 7px;height:16px;overflow:hidden;vertical-align:bottom;font-family:tahoma;line-height:1.3;border-radius:2px 2px 0 0;-moz-border-radius:2px 2px 0 0}.active .mention-highlighter{height:auto}.mention-highlighter code{font-family:tahoma;line-height:1.3;background-color:#d2e1f3;color:#d2e1f3;display:inline-block;padding:1px;margin:0 -1px -2px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px}.ua-ie8 .mention-highlighter code{padding:0;margin:0}
+.status-item{color:#333}.status-item .mod{margin:0;padding-bottom:12px;position:relative}.status-item .hd{float:left;margin:3px 15px 0 0;width:48px;height:48px}.status-item .bd{border-bottom:1px solid #eee;overflow:hidden;padding-bottom:14px;zoom:1;_width:520px}.status-item .bd .text{margin:0 0 5px 0;word-wrap:break-word}.status-item blockquote{margin:5px 0 5px 25px;padding:0 0 0 15px;background:url('/pics/quotel.gif') no-repeat left 4px;width:375px;_width:365px}.status-item blockquote p{display:inline;background:url('/pics/quoter.gif') no-repeat right bottom;padding:0 15px 0 0;word-wrap:break-word;*zoom:1}.status-item blockquote p img{vertical-align:bottom}.status-item .attachments{overflow:hidden;zoom:1;_line-height:0}.status-item .attachments div,.status-item .attachments h6,.status-item .attachments p{line-height:1.62}.status-item .description{margin:0;color:#aaa}.status-item .actions{margin:5px 0;color:#aaa}.status-item .actions a.btn{color:#7094b7}.status-item .actions a.btn:hover{background:#7094b7;color:#fff}.status-item .actions a.btn-unlike,.status-item .actions a.btn-unreshare{color:#999}.status-item .actions a.btn-unlike:hover,.status-item .actions a.btn-unreshare:hover{background:#999;color:#fff}.status-item .description,.status-item .attachments,.status-item .actions,.status-item .others{padding-left:24px}.status-item .attachments .description{padding-left:0;word-wrap:break-word}.status-item .big:hover{cursor:url('/pics/icon/big.cur'),auto}.status-item .small:hover{cursor:url('/pics/icon/small.cur'),auto}.status-item .others{display:none}.status-item .comments{position:relative;left:0;top:0;overflow:hidden;*zoom:1}.status-item .comments-items{_line-height:0}.status-item .comments-items p{margin:3px 0;color:#666;overflow:hidden;zoom:1;word-wrap:break-word;line-height:1.62}.status-item .comments-items .mover{background:#f2f2f2}.status-item .comments-items p em{float:left;width:80%;font-style:normal}.status-item .comments .comment-text{width:330px}.status-item .comments .add-more-comments,.comment-posted input{display:none}.status-item .comment-posted .add-more-comments{display:inline}.status-item .comments-items .btn-del{float:right;color:#aaa}.status-item .comments-items .btn-del:hover{color:#bbb;background:0}.status-item .likers{padding:0;color:#aaa}.status-item .likers em{max-width:300px;float:left;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden;zoom:1;font-style:normal;_width:expression((documentElement.clientWidth>300) ? "300px":"auto")}.status-item .created_at a{color:#999}.status-item .created_at a:hover{background:#999;color:#fff}.status-item .reshared_by{background:url('/pics/icon/reshared-icon.gif') no-repeat left center;padding:0 0 0 18px;color:#66a366}.status-current .bd{border-color:#bfddb7}.video-player{position:relative;left:0;top:0;zoom:1}.video-player img{width:130px;height:97px;border:0 none}.video-player .video-overlay{width:130px;height:97px;position:absolute;top:0;left:0;background:url(/pics/video_overlay.png);cursor:pointer}.video-player .video-overlay:hover{background-position:0 -97px}* html .video-player .video-overlay{background:0;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/pics/video_overlay_ie6.png')}.video-player .video-object{display:none}.layout-1 .attachments{display:inline}.layout-1 .media img{float:right;margin-left:12px;max-height:100px;max-width:100px;_width:expression((documentElement.clientWidth>100) ? "100px":"auto")}.layout-None blockquote,.layout-2 blockquote{width:auto}.layout-3 .album,.layout-3 .media,.layout-None .media{float:left;margin:0 10px 10px 0;background:0;padding:0}.layout-3 .album{height:100px;width:100px;line-height:100px;vertical-align:middle;text-align:center;background:url('/pics/albumback_s.gif') 1px 1px no-repeat;padding:5px 8px 8px 5px}.layout-3 .album img{max-height:100px;max-width:100px;_width:expression((documentElement.clientWidth>100) ? "100px":"auto")}.layout-3 blockquote{clear:both}.layout-4 .media{float:left;margin:0 14px 0 0}.combined-statuses{margin:0 0 10px 63px;padding:0 0 8px 0;border-bottom:1px solid #eee}.comments .mention-highlighter{top:2px;width:300px;padding:2px 0}
+#statuses { position: relative }
+#statuses .tips-overly { top: 45px }
+.tips-overly{position:absolute;z-index:99;width:320px;top:0;left:0;background:#fff;border:1px solid #bfddb7}.tips-overly .tips-bd{padding:12px 15px;color:#333;line-height:1.62}.tips-overly h2{margin-bottom:6px;font-size:12px;font-weight:800;color:#333}.tips-overly p{margin:0 0 12px 0}.tips-overly .lnk-bn{display:inline-block;*display:inline;zoom:1;padding:2px 8px;line-height:1.4;font-size:12px}.tips-overly a.lnk-bn:link,.tips-overly a.lnk-bn:visited{color:#fff;background-color:#4aac66;font-size:12px}.tips-overly a.lnk-bn:hover,.tips-overly a.lnk-bn:active{color:#fff;background-color:#4dc36f;font-size:12px}.back-old{padding-bottom:5px;text-align:right;margin-top:-24px;zoom:1;_margin-top:0}.back-old .lnk-back-old:link{color:#bbb}.back-old .lnk-back-old:hover{background:#bbb;color:#fff}.tips-overly .tips-hd{position:absolute;top:-6px;top:-8px\9;left:8px;background:#fff;width:10px;height:10px;overflow:hidden;line-height:10em;border-left:1px solid #bfddb7;border-top:1px solid #bfddb7;zoom:1;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);filter:progid:DXImageTransform.Microsoft.Matrix(M11=0.707,M12=-0.707,M21=0.707,M22=0.707,sizingMethod=\'auto expand\')}
+</style>
+
+<style type="text/css">
+.suggest-overlay {
+  position: absolute; z-index: 99; width: auto; background: #fff; border: 1px solid #c5c7d2;
+    -moz-border-radius : 3px;
+    -webkit-border-radius : 3px;
+    border-radius: 3px 
+}
+.suggest-overlay .bd {
+   min-width: 220px; 
+   line-height: 1; background: #fafafa; color: #b3b3b3; padding: 5px;
+    -moz-border-radius : 3px;
+    -webkit-border-radius : 3px;
+    border-radius: 3px 
+}
+.suggest-overlay ul { color: #333; padding: 3px 0; min-width: 214px }
+.suggest-overlay li { cursor: pointer; padding: 3px 7px }
+.suggest-overlay li b { font-weight: bold }
+.suggest-overlay li span { color: #999 }
+.suggest-overlay img { margin-right: 5px; width: 20px; height: 20px; vertical-align: middle }
+.suggest-overlay .on { background: #e9f0f8 }
+
+    .enter { overflow:hidden; margin: 0 0 20px; padding: 5px 10px; background: #ebf8f9 }
+    .enter p { overflow:hidden; line-height: 2.2em; margin: 0 }
+    .enter a { color: #1398b0 }
+    .enter a:hover { color: #fff; background: #1398b0 }
+    .enter a.notification {
+        float:right;
+        padding:0px 9px;
+        background-color:#BFE8EC;
+        font-size:14px;
+        font-weight:bold;
+        line-height:1.88;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+</style>
+
+
+<link rel="shortcut icon" href="http://img3.douban.com/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+   
+ <div class="top-nav">
+ </div>
+  
+<div id="wrapper">
+        
+<div id="header">
+<div id="db-nav-main" class="site-nav">
+    <div class="site-nav-logo">
+        <a href="http://www.douban.com"><img src="http://img1.douban.com/pics/nav/lg_main_a10.png" alt="豆瓣"></a>
+    </div>
+    <div class="bd">
+    <div class="nav-srh">
+        <form name="ssform" method="get" action="http://www.douban.com/search">
+            <div class="inp">
+                <span><input id="search_text" name="search_text" type="text" title="成员、小组、音乐人、主办方" size="22" maxlength="60" value=""/></span>
+                <span><input class="bn-srh" type="submit" value="搜索"/></span>
+            </div>
+        </form>
+        
+    </div>
+    <script id="tmpl-search-at-suggest" type="text/tmpl">
+      <ul class="srh-sug">
+          {{#users}}
+          <li data-id="{{uid}}"><img src="{{avatar}}">{{{username}}}&nbsp;<span>({{{uid}}})</span></li>
+          {{/users}}
+      </ul>
+    </script>
+    <div class="site-nav-items nav-logged-in">
+     <ul>
+      <li><a href="http://www.douban.com/">首页</a></li>
+      <li><a href="http://www.douban.com/update/">友邻广播</a>
+      </li>
+      <li><a href="http://www.douban.com/mine/">我的豆瓣</a></li>
+      <li><a href="http://www.douban.com/group/">我的小组</a></li>
+      <li><a href="http://www.douban.com/site/">我的小站</a></li>
+     </ul>
+    </div>
+    </div>
+    <div class="ext"></div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+<script type="text/javascript" src="http://www.douban.com/js/api.js?v=2" />
+<script type="text/javascript" src="http://www.douban.com/js/api-parser.js?v=1"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var objContent = $("#item");
+        $("#obuserid").blur(function () {
+            console.log($(this).val());
+            $.getJSON('http://api.douban.com/people/' + $(this).val() + "/miniblog/contacts?alt=xd&max-results=50&callback=?",
+            function (data) {
+                //console.log(data.entry);
+                //window.entry = data.entry;
+                $.each(data.entry, function (index, item) {
+                    console.log(item);
+                    console.log(item.author.name.$t + ":" + item.author.link[1]['@href'] + item.author.link[2]['@href'] + item.title.$t);
+
+                    var authorIcon = "<div class='status-item'><div class='mod'><div class='bd layout-None'><div class='hd'>" + '<img src=' + item.author.link[2]['@href'] + '></div>';
+                    var authorName = "<a href='" + item.author.link[1]['@href'] + "'>" + item.author.name.$t + '</a>';
+                    var authorSay = item.content.$t.toString();
+                    objContent.append(authorIcon + authorName + ":" + authorSay + '</div></div></div>');
+
+                });//End of Each element of data entry
+                //data.entry.each(function () { console.log($(this)); });
+                console.log(data);
+
+            });//End of Get json
+        });//End of blur event of user id textbox
+    });//End of start
+ </script>
+
+
+        
+<div id="content">    
+    <h1><input id="obuserid" type="text" />关注的广播</h1>
+    <div id="item"></div>
+</div>     
+
+        
+<div id="footer">
+        
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2012 douban.com, all rights reserved
+</span>
+
+</div>
+
+</div>
+</body>
+</html>
+
