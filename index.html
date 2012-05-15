@@ -119,7 +119,7 @@
         var objContent = $("#item");
         $("#obuserid").blur(function () {
             console.log($(this).val());
-            $.getJSON('http://api.douban.com/people/' + $(this).val() + "/miniblog/contacts?alt=xd&max-results=10&callback=?",
+            $.getJSON('http://api.douban.com/people/' + $(this).val() + "/miniblog/contacts?alt=xd&max-results=50&callback=?",
             function (data) {
                 //console.log(data.entry);
                 window.entry = data.entry;
