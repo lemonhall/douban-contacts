@@ -119,18 +119,23 @@
         var objContent = $("#item");
         $("#obuserid").blur(function () {
             console.log($(this).val());
-            $.getJSON('http://api.douban.com/people/' + $(this).val() + "/miniblog/contacts?alt=xd&max-results=50&callback=?",
+            $.getJSON('http://api.douban.com/people/' + $(this).val() + "/miniblog/contacts?alt=xd&max-results=10&callback=?",
             function (data) {
                 //console.log(data.entry);
-                //window.entry = data.entry;
+                window.entry = data.entry;
                 $.each(data.entry, function (index, item) {
                     console.log(item);
                     console.log(item.author.name.$t + ":" + item.author.link[1]['@href'] + item.author.link[2]['@href'] + item.title.$t);
 
-                    var authorIcon = "<div class='status-item'><div class='mod'><div class='bd layout-None'><div class='hd'>" + '<img src=' + item.author.link[2]['@href'] + '></div>';
+                    var authorIcon = "<div class='status-item'><div class='mod'><div class='bd layout-1'><div class='hd'>" + '<img src=' + item.author.link[2]['@href'] + '></div>';
                     var authorName = "<a href='" + item.author.link[1]['@href'] + "'>" + item.author.name.$t + '</a>';
                     var authorSay = item.content.$t.toString();
-                    objContent.append(authorIcon + authorName + ":" + authorSay + '</div></div></div>');
+					var qq="";
+					if(item['db:attribute'].length>2){
+								qq='<blockquote>'+item['db:attribute'][1].$t+'</blockquote>';
+					}
+					//console.log(qq);
+                    objContent.append(authorIcon + authorName + ":<p class='text'>" + authorSay + qq+'</p></div></div></div>');
 
                 });//End of Each element of data entry
                 //data.entry.each(function () { console.log($(this)); });
